@@ -1,0 +1,35 @@
+# The basics, designed to be safe(ish) for production servers
+
+. $BASH_PROFILE_EXTENSIONS/git
+. $BASH_PROFILE_EXTENSIONS/ruby
+
+alias ls='ls -F'
+alias ll='ls -lFh'
+alias lla='ls -lFah'
+alias llt='ls -lFahrt'
+alias ls='ls -F'
+
+alias pd='pushd'
+alias pop='popd'
+alias d='dirs'
+                     
+alias a=alias
+alias h='history | tail -50'
+
+alias ebp='$EDITOR ~/.bash_profile'
+alias ebpe='$EDITOR $BASH_PROFILE_EXTENSIONS'
+alias sbp='. ~/.bash_profile'
+
+export PS1="\\[\\033[31m\\]\\!\\[\\033[0m\\] \\[\\033[32m\\]\\t\\[\\033[0m\\] \\[\\033[37m\\[\\033[44m\\] \\u@\\h \\[\\033[0m\\]\\n\\w \$ "
+# export PS1="\t \u@\h \w $(__git_ps1 \"(branch: %s)\")\n\$"   # git branch prompt, currently failing...
+# RED="\\[\\033[31m\\]"
+# GREEN="\\[\\033[32m\\]"
+# YELLOW="\\[\\033[33m\\]"
+# BLUE="\\[\\033[34m\\]"
+# WHITE="\\[\\033[0m\\]"                          
+# export PS1="$RED\\! $GREEN\\t $RED\\u@\\h $WHITE\\w \$ "
+# export PS1="$RED\u@\h $WHITE\! $GREEN\w $ $WHITE"            # alternate version, no time
+
+# remove all .svn dirs in the current dir and subdirs
+alias rmsvn='find . -name ".svn" -exec rm -rf "{}" \;'
+           
