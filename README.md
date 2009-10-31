@@ -1,6 +1,7 @@
 Usage: in your ~/.bash_profile, include these two lines:
 
-> export BASH_PROFILE_EXTENSIONS=~/path/to/extensions
+> export BASH_PROFILE_EXTENSIONS=~/path/to/extensions     
+>
 > . $BASH_PROFILE_EXTENSIONS/load
 
 The extensions load each other.  There are two currently used entry points:
