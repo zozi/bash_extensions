@@ -7,4 +7,6 @@ export EDITOR=/usr/bin/mate
 
 # open Textmate with only the dirs we normally want to work with
 alias matey='mate `ls -Fa | grep -v .git/ | grep -v .DS_Store | grep -v _site/ | grep -v log/ | grep -v tmp/ | grep -v vendor/ | grep -v "\./"`'
+alias gdm='git diff HEAD | mate'
+
 

@@ -1,6 +1,5 @@
 # The basics, designed to be safe(ish) for production servers
 
-. $BASH_PROFILE_EXTENSIONS/git
 . $BASH_PROFILE_EXTENSIONS/ruby
 
 alias ls='ls -F'
@@ -32,4 +31,4 @@ export PS1="\\[\\033[31m\\]\\!\\[\\033[0m\\] \\[\\033[32m\\]\\t\\[\\033[0m\\] \\
 
 # remove all .svn dirs in the current dir and subdirs
 alias rmsvn='find . -name ".svn" -exec rm -rf "{}" \;'
-           
+                                      
