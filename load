@@ -1,2 +1,3 @@
 . $BASH_PROFILE_EXTENSIONS/osx
 
+# TODO write some bash magic vaguely like:  if [ -F ./custom ]; . ./custom; fi
