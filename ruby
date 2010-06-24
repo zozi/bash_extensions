@@ -17,6 +17,10 @@ alias rdp='rake db:prepare'
 alias rdr='rake db:rebuild'
 alias rtp='rake db:test:prepare'
 
-alias au='script/autospec'
-alias auf='AUTOFEATURE=true script/autospec'
+alias au='autospec'
+alias auf='AUTOFEATURE=true bundle exec autospec'
 
+# Bundler
+
+alias bir='bundle install --relock --without production'
+alias be='bundle exec'
