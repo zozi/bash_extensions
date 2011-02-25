@@ -1,0 +1,8 @@
+# Example:
+export DEV_DIR=~
+
+if [ $OSTYPE != 'linux-gnu' ]; then
+  echo
+  echo "*** NOTE: YOUR DEV_DIR IS CURRENTLY SET TO '$DEV_DIR'; YOU CAN CHANGE IT (AND REMOVE THIS WARNING) IN '~/.bash_extensions/set_dev_dir' ***"
+  echo
+fi
