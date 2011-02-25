@@ -1,26 +1,52 @@
 # The basics, designed to be safe(ish) for production servers
+export PATH=$PATH:~/bin:$DEV_DIR/git_scripts
+                         
+alias updev='$DEV_DIR/zozi/chef/cookbooks/servers/bootstrap_dev_box/run.rb && sbp'
 
-. $BASH_PROFILE_EXTENSIONS/ruby
-
-alias ls='ls -F'
 alias ll='ls -lFh'
 alias lla='ls -lFah'
-alias llt='ls -lFahrt'
-alias ls='ls -F'
+alias llt='ls -lhFart'
 
 alias pd='pushd'
 alias pop='popd'
 alias d='dirs'
-                                                      
+
 alias a=alias
 alias h='history | tail -50'
 
+# eg "ag rake" to see all rake-related aliases
+function ag { 
+  alias | grep "$1" | grep -v grep 
+}
+
 alias g=git
-alias gpp='git pull && git push'
 
 alias ebp='$EDITOR ~/.bash_profile'
-alias ebpe='$EDITOR $BASH_PROFILE_EXTENSIONS'
+alias ebpe='$EDITOR $DEV_DIR/zozi/chef/cookbooks/servers/files/default/bash_extensions'
 alias sbp='. ~/.bash_profile'
+
+# remove all .svn dirs in the current dir and subdirs
+alias rmsvn='find . -name ".svn" -exec rm -rf "{}" \;'
+alias rmds='find . -name ".DS_Store" -exec rm -rf "{}" \;'
+
+# eg "psg mysql" to see all mysql processes
+function psg {
+  ps wwwaux | egrep "($1|%CPU)" | grep -v grep
+}
+
+# Display folder and it's content as a tree
+function tree {
+ find ${1:-.} -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
+}
+
+# GIT & prompt
+
+alias gpr='git pull --rebase'
+alias gfr='gpr'
+alias gpp='gpr && git push origin HEAD'
+alias grc='git rebase --continue'
+
+alias github="open \`git config -l | grep 'remote.origin.url' | sed -n 's/remote.origin.url=git@github.com:\(.*\)\/\(.*\).git/https:\/\/github.com\/\1\/\2/p'\`"
 
 parse_git_branch() {
  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
@@ -41,10 +67,4 @@ alias p2='export PS1="\\[\\033[32m\\]\\t\\[\\033[0m\\] \\[\\033[37m\\[\\033[44m\
 # WHITE="\\[\\033[0m\\]"
 # export PS1="$RED\\! $GREEN\\t $RED\\u@\\h $WHITE\\w \$ "
 # export PS1="$RED\u@\h $WHITE\! $GREEN\w $ $WHITE"            # alternate version, no time
-# remove all .svn dirs in the current dir and subdirs
-alias rmsvn='find . -name ".svn" -exec rm -rf "{}" \;'
-alias rmds='find . -name ".DS_Store" -exec rm -rf "{}" \;'
-                                 
-# everyone needs Jeckyll, right?                                      
-alias jek='rm -rf _site && jekyll --pygments'                                                                                      
-alias jeks='rm -rf _site && jekyll --pygments --server 4000 --auto'                                                                                      
+
