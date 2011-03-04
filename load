@@ -1,11 +1,10 @@
 . $BASH_PROFILE_EXTENSIONS/ruby
 . $BASH_PROFILE_EXTENSIONS/basics
-. $BASH_PROFILE_EXTENSIONS/set_dev_dir
 
 if [ $OSTYPE != 'linux-gnu' ]; then
   . $BASH_PROFILE_EXTENSIONS/dev_box_osx
 fi
 
-if [ -f $BASH_PROFILE_EXTENSIONS/custom ]; then 
-  . $BASH_PROFILE_EXTENSIONS/custom    
+if [ -f $BASH_PROFILE_EXTENSIONS/custom ]; then
+  . $BASH_PROFILE_EXTENSIONS/custom
 fi
