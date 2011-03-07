@@ -1,5 +1,5 @@
-alias zozi="cd $DEV_DIR/zozi"
-alias zz="cd $DEV_DIR/zozi"
+alias zozi='cd zozi'
+alias zz='zozi'
 
 export PATH="~/bin:/usr/local/mysql/bin:/opt/local/bin:/usr/sbin:$PATH"
 export MANPATH=$MANPATH:/opt/local/man
