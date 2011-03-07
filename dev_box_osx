@@ -6,6 +6,7 @@ export MANPATH=$MANPATH:/opt/local/man
 export EDITOR=`which mate`
 
 # open Textmate with only the dirs we normally want to work with...
-alias mater='mate `ls -Fa | grep -v .git/ | grep -v .DS_Store | grep -v _site/ | grep -v doc/ | grep -v log/ | grep -v tmp/ | grep -v vendor/ | grep -v "\./"` public/javascripts public/stylesheets'
+alias mater='mate `ls -FA | grep -v .git/ | grep -v .DS_Store | grep -v _site/ | grep -v doc/ | grep -v log/ | grep -v tmp/ | grep -v vendor/` public/javascripts public/stylesheets'
+alias matea='mate `ls -FA | grep -v .git/`'
 alias gdm='git diff HEAD | mate'
 
