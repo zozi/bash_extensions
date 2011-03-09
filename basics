@@ -1,5 +1,5 @@
 # The basics, designed to be safe(ish) for production servers
-export PATH=$PATH:~/bin:~/.dev_env/git-scripts
+export PATH=$PATH:~/bin:~/.dev_env/git/git-scripts
 
 alias updev='~/zozi/chef/cookbooks/servers/bootstrap_dev_box/run.rb && sbp'
 
