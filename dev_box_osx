@@ -1,4 +1,4 @@
-alias zozi='cd zozi'
+alias zozi='cd ~/zozi'
 alias zz='zozi'
 
 export PATH="~/bin:/usr/local/mysql/bin:/opt/local/bin:/usr/sbin:$PATH"
