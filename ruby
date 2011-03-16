@@ -7,6 +7,7 @@ alias be='bundle exec'
 
 alias sp='be rspec --color'
 alias sn='sp --format nested'
+alias sf='sp --require fuubar --format Fuubar'
 
 alias r='be rails'
 alias rdm='rake db:migrate'
