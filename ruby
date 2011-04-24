@@ -5,7 +5,7 @@ alias be='bundle exec'
 
 # Rails
 
-alias sp='be rspec --color'
+alias sp='be rspec --color --drb'
 alias sn='sp --format nested'
 alias sf='sp --require fuubar --format Fuubar'
 
