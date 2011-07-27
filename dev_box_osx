@@ -1,7 +1,7 @@
 alias zozi='cd ~/zozi'
 alias zz='zozi'
 
-export PATH="~/bin:/usr/local/mysql/bin:/opt/local/bin:/usr/sbin:$PATH"
+export PATH="~/bin:/usr/local/mysql/bin:/usr/sbin:$PATH"
 # export PATH="$PATH:/usr/sbin:~/bin"
 
 export MANPATH=$MANPATH:/opt/local/man
@@ -12,3 +12,6 @@ alias mater='mate `ls -FA | grep -v .git/ | grep -v .DS_Store | grep -v _site/ |
 alias matea='mate `ls -FA | grep -v .git/`'
 alias gdm='git diff HEAD | mate'
 
+# For homebrew-based mysql install:
+alias mystop='launchctl unload -w ~/Library/LaunchAgents/com.mysql.mysqld.plist ; killall mysqld'
+alias mystart='launchctl load -w ~/Library/LaunchAgents/com.mysql.mysqld.plist'
